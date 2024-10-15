@@ -1,0 +1,43 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-item {
+    flex: 1 1 30%;
+    padding: 10px;
+    background-color: lightblue;
+    margin: 5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: red;
+    padding: 20px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .flex-item{
+        flex: 1 1 45%; /* 2 items in each line/row */
+    }
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .flex-item {
+        flex: 1 1 100%; /* 1 item in each line/row */
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
